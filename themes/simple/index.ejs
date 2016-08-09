@@ -3,12 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title><%= name %></title>
-    <link inline rel="stylesheet" href="./normalize.css">
+    <!-- <link inline rel="stylesheet" href="./normalize.css"> -->
+    <!-- bootstrap:cdn -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- font-awesome:cdn -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link inline rel="stylesheet" href="./style.css">
   </head>
   <body>
     <h1><%= name %></h1>
     <p><%= location %></p>
+    <p><%= birth %></p>
+    <p><%= mobile %></p>
     <%- include('education', { education: education }) %>
+    <%- include('experience', { experience: experience }) %>
   </body>
 </html>

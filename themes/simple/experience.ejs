@@ -1,0 +1,12 @@
+<section>
+  <% experience.map(exp => { %>
+    <div class="row">
+      <div class="col-sm-5"><%- exp.company %></div>
+      <div class="col-sm-4"><%- exp.position %></div>
+      <div class="col-sm-3 col-sm-text-right"><%- exp.start %> ~ <%- exp.end %></div>
+    </div>
+    <div class="">
+      <%- exp.content %>
+    </div>
+  <% }).join('') %>
+</section>

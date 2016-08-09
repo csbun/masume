@@ -1,7 +1,7 @@
 <ul>
   <% education.map(edu => { %>
-    <li>
-      <%= edu.name %>
-    </li>
+    <li><%= edu.school %></li>
+    <li><%= edu.college %></li>
+    <li><%= edu.start %> ~ <%= edu.end %></li>
   <% }).join('') %>
 </ul>

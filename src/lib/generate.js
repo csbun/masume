@@ -13,18 +13,13 @@ export default function generate(options, cb) {
     compress: true,
     rootpath: path.dirname(templatePath),
   }, (err, tpl) => {
-    console.log(tpl);
     if (err) {
       cb(err);
     } else {
-      try {
-        const html = ejs.render(tpl, ctx, {
-          filename: templatePath,
-        });
-        cb(null, html);
-      } catch (e) {
-        cb(e);
-      }
+      const html = ejs.render(tpl, ctx, {
+        filename: templatePath,
+      });
+      cb(null, html);
     }
   });
 }
