@@ -1,9 +1,13 @@
 <section>
+  <h2>
+    <i class="fa fa-briefcase" aria-hidden="true"></i>
+    工作经验
+  </h2>
   <% experience.map(exp => { %>
     <div class="row">
       <div class="col-sm-5"><%- exp.company %></div>
-      <div class="col-sm-4"><%- exp.position %></div>
-      <div class="col-sm-3 col-sm-text-right"><%- exp.start %> ~ <%- exp.end %></div>
+      <div class="col-sm-3"><%- exp.position %></div>
+      <div class="col-sm-4 text-sm-right"><%- exp.start %> ~ <%- exp.end %></div>
     </div>
     <div class="">
       <%- exp.content %>

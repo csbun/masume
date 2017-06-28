@@ -1,7 +1,13 @@
-<ul>
+<section>
+  <h2>
+    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+    教育经历
+  </h2>
   <% education.map(edu => { %>
-    <li><%= edu.school %></li>
-    <li><%= edu.college %></li>
-    <li><%= edu.start %> ~ <%= edu.end %></li>
+    <div class="row">
+      <div class="col-sm-4"><%- edu.school %></div>
+      <div class="col-sm-4"><%- edu.college %></div>
+      <div class="col-sm-4 text-sm-right"><%- edu.start %> ~ <%- edu.end %></div>
+    </div>
   <% }).join('') %>
-</ul>
+</section>

@@ -2,20 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%= name %></title>
+    <title><%= name %> | <%= nameEN %></title>
     <!-- <link inline rel="stylesheet" href="./normalize.css"> -->
     <!-- bootstrap:cdn -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <!-- font-awesome:cdn -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link inline rel="stylesheet" href="./style.css">
+    <!-- <link inline rel="stylesheet" href="./style.css"> -->
   </head>
   <body>
-    <h1><%= name %></h1>
-    <p><%= location %></p>
-    <p><%= birth %></p>
-    <p><%= mobile %></p>
+    <section>
+      <h1><%= name %></h1>
+      <h1><%= nameEN %></h1>
+      <p>
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <%= location %>
+      </p>
+      <p>
+        <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+        <%= birth %>
+      </p>
+      <p>
+        <i class="fa fa-phone" aria-hidden="true"></i>
+        <%= mobile %>
+      </p>
+    </section>
     <%- include('education', { education: education }) %>
     <%- include('experience', { experience: experience }) %>
   </body>
+  <script>
+// setTimeout(function () {
+//   window.location.reload();
+// }, 1000);
+  </script>
 </html>
